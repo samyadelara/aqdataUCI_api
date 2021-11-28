@@ -10,6 +10,7 @@ class AQ_heatmap():
     def plot(year, dataframe: pd.DataFrame):
         corr = dataframe.corr()
         main = 'Air Quality Data (UCI) - Correlation Heatmap (' + str(year) + ')\n'
+        filename = 'AQ_heatmap_' + str(year)+ '.png'
         
         plt.figure(figsize=(16, 6))
         heat_corr = sns.heatmap(
@@ -22,6 +23,6 @@ class AQ_heatmap():
         heat_corr.set_title(main,
                          fontdict = {'fontsize':16}, pad = 1)
         #save
-        plt.savefig('AQ_heatmap.png', dpi=300, bbox_inches='tight', facecolor = 'white')
+        plt.savefig(filename, dpi=300, bbox_inches='tight', facecolor = 'white')
         
         return print('Plot done!')
