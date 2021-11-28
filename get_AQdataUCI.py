@@ -26,6 +26,7 @@ class Aq_from_uci():
         data = self.dwd_aqdata()
         #drop empty columns
         data.drop(data.iloc[:, 15:], inplace = True, axis = 1)
+        data.drop('NMHC(GT)', inplace = True, axis = 1)
         data.dropna(how='all', inplace = True, axis = 0)
         
         #datetime column

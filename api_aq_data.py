@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 import pandas as pd
 import json
 from get_AQdataUCI import *
+from aq_plot import *
 
 app = Flask(__name__)
 api = Api(app)
@@ -15,6 +16,9 @@ class Dailymean(Resource):
         
         #group by Day - Daily mean
         aq_daily = aq_filtered.groupby(['Date']).mean()
+            
+        #plot
+        AQ_heatmap.plot(year, aq_daily)
         
         #formatting to save
         lines = aq_daily.index.strftime('%d-%b-%Y')
@@ -25,7 +29,6 @@ class Dailymean(Resource):
         aq_json = aq_daily.to_json()
         with open(filename + '.json', 'w') as f:
             json.dump(aq_json, f)
-        #plot and save
         
         return aq_json
 
