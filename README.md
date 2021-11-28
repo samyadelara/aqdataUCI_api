@@ -4,7 +4,7 @@ API for [UCI Air Quality data - Italian City](https://archive.ics.uci.edu/ml/dat
 ## Author:
 - <a href='https://github.com/samyadelara'>Samya de Lara Lins de Araujo Pinheiro</a>
 
-## How to run the project
+## How to run the project - Python 3.7
 
 1 - Clone repo
 
@@ -18,10 +18,10 @@ git clone https://github.com/samyadelara/aqdataUCI_api.git
 cd aqdataUCI_api
 ```
 
-3 - Create virtual env - using virtualenv library
+3 - Create virtual env - using venv
 
 ```
-virtualenv env
+python3.7 -m venv env
 ```
 
 4 - Activate virtual environment
