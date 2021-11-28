@@ -5,9 +5,11 @@ import json
 from get_AQdataUCI import *
 from aq_plot import *
 
+print('Activating API...')
 app = Flask(__name__)
 api = Api(app)
 
+print('Downloading data...')
 aq_data = Aq_from_uci()
 
 class Dailymean(Resource):
