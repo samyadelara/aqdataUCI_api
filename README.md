@@ -52,4 +52,4 @@ or
 Filtered data will be aggregated as *Daily Means* and saved as .json and .csv format.
 A HeatMap is prepared and saved as .png to illustrate the association between variables.
 
-> *conclusions*
+> Correlation is stronger (positive) between most of the pollutants, and is negative with NOx (one of its precursors). Temperature presented higher absolute correlation between nitrogen oxides (NOx and NO2) considering both filtered periods (2004:Mar-Dec and 2005:Jan-Apr).
